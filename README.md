@@ -1,3 +1,1 @@
-# zhiyong.github.io
-
-# this is a test
+Qichao Shi's personal website
