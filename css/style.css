@@ -58,14 +58,15 @@ address {
     font-family: Times, Geneva, Arial,
           SunSans-Regular, sans-serif }
 
-
 div.maincontent  {
-	font-size: large;
-	position: absolute;
-	margin-top:20px;
-	left: 125px;
-	max-width: 800px;
-	top: -14px;
+    font-size: large;
+    position: absolute;
+    margin: 0 auto;    /* 居中显示 */
+    left: 0;
+    right: 0;
+    top: -14px;
+    width: 80%;   /* 你可以调整这个值以适应你的需要 */
+    text-align: justify;  /* 文本两端对齐 */
 }
 
 #buttons ul { 
