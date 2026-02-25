@@ -1,0 +1,307 @@
+/* =============================================
+   Zhiyong Li Academic Website — Modern Style
+   ============================================= */
+
+/* --- Reset & Base --- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --navy:      #1a2e4a;
+  --accent:    #2563a8;
+  --accent-lt: #e8f0fb;
+  --text:      #222222;
+  --muted:     #555555;
+  --border:    #d8dce2;
+  --bg:        #ffffff;
+  --max-w:     860px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--text);
+  background: var(--bg);
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: var(--navy);
+}
+
+/* --- Layout Wrapper --- */
+.site-wrapper {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* --- Site Header --- */
+.site-header {
+  border-bottom: 2px solid var(--navy);
+  padding: 28px 0 16px;
+  text-align: center;
+}
+
+.site-header h1 {
+  font-family: 'Georgia', serif;
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--navy);
+  letter-spacing: 0.5px;
+  margin-bottom: 18px;
+}
+
+/* --- Navigation --- */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  flex-wrap: wrap;
+}
+
+nav a {
+  display: inline-block;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.82rem;
+  font-weight: bold;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--navy);
+  text-decoration: none;
+  padding: 6px 20px;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  transition: background 0.2s, color 0.2s;
+}
+
+nav a:hover,
+nav a.active {
+  background: var(--navy);
+  color: #fff;
+  text-decoration: none;
+}
+
+nav a + a {
+  border-left: 1px solid var(--border);
+}
+
+/* --- Page Main --- */
+.page-main {
+  padding: 40px 0 60px;
+}
+
+/* --- Home: Profile Section --- */
+.profile-grid {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 36px;
+  align-items: start;
+  margin-bottom: 36px;
+}
+
+.profile-photo {
+  width: 170px;
+  height: auto;
+  border-radius: 3px;
+  border: 1px solid var(--border);
+  display: block;
+}
+
+.profile-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--navy);
+  margin-bottom: 6px;
+}
+
+.profile-title {
+  font-size: 1rem;
+  color: var(--muted);
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.profile-section h3 {
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--navy);
+  margin-bottom: 4px;
+  margin-top: 16px;
+}
+
+.profile-section p {
+  font-size: 0.97rem;
+  color: var(--text);
+}
+
+/* --- Divider --- */
+.divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 32px 0;
+}
+
+/* --- Section Headings --- */
+h2.section-title {
+  font-family: Georgia, serif;
+  font-size: 1.25rem;
+  color: var(--navy);
+  font-weight: bold;
+  margin-bottom: 20px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--border);
+}
+
+h3.subsection-title {
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--navy);
+  margin: 28px 0 12px;
+}
+
+/* --- Publication List --- */
+.pub-list {
+  list-style: none;
+  padding: 0;
+}
+
+.pub-list li {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  padding: 10px 0;
+  border-bottom: 1px dotted var(--border);
+  color: var(--text);
+}
+
+.pub-list li:last-child {
+  border-bottom: none;
+}
+
+.pub-num {
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin-right: 4px;
+}
+
+.pub-title {
+  font-weight: bold;
+  color: #8b1c1c;
+}
+
+.pub-journal {
+  font-style: italic;
+}
+
+.pub-meta {
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+/* --- Teaching / Course List --- */
+.course-list {
+  list-style: none;
+  padding: 0;
+}
+
+.course-list li {
+  font-size: 0.97rem;
+  padding: 10px 14px;
+  border-left: 3px solid var(--accent-lt);
+  margin-bottom: 10px;
+  background: #fafbfc;
+  line-height: 1.5;
+}
+
+.course-list li:hover {
+  border-left-color: var(--accent);
+}
+
+.course-level {
+  display: inline-block;
+  font-size: 0.75rem;
+  background: var(--accent-lt);
+  color: var(--accent);
+  border-radius: 2px;
+  padding: 1px 7px;
+  margin-left: 8px;
+  font-family: Arial, sans-serif;
+  vertical-align: middle;
+}
+
+/* --- About: Timeline --- */
+.edu-list {
+  list-style: none;
+  padding: 0;
+}
+
+.edu-list li {
+  position: relative;
+  padding: 10px 0 10px 20px;
+  font-size: 0.97rem;
+  border-bottom: 1px dotted var(--border);
+  line-height: 1.55;
+}
+
+.edu-list li:last-child {
+  border-bottom: none;
+}
+
+.edu-list li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-size: 0.8rem;
+  top: 13px;
+}
+
+/* --- Footer --- */
+.site-footer {
+  text-align: center;
+  font-size: 0.82rem;
+  color: var(--muted);
+  font-family: Arial, sans-serif;
+  padding: 20px 0 32px;
+  border-top: 1px solid var(--border);
+}
+
+/* --- Responsive --- */
+@media (max-width: 600px) {
+  body {
+    font-size: 15px;
+  }
+
+  .site-header h1 {
+    font-size: 1.6rem;
+  }
+
+  .profile-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .profile-photo {
+    width: 130px;
+    margin: 0 auto;
+  }
+
+  nav a {
+    padding: 7px 12px;
+    font-size: 0.78rem;
+    letter-spacing: 0.8px;
+  }
+}
